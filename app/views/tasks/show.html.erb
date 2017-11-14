@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="task">
+    <h3><%= @task.title %></h3>
+    <p><%= @task.description %></p>
+    <p>Deadline: <%= @task.deadline %></p>
+    <p>Status: <% if @task.status == false %>
+      <%= "To do" %>
+      <% else %>
+      <%= "Done" %>
+      <% end %></p>
+    </div>
+    <div class="buttons">
+      <%= link_to "Edit", edit_task_path(@task) %>
+      <%= link_to "Delete", task_path(@task), method: :delete %>
+      <%= link_to "Back", tasks_path %>
+    </div>
+  </div>
+
+
+  <%= %>
